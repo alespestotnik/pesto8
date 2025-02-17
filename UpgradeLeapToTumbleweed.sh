@@ -57,7 +57,7 @@ fi
 # Step 2: Remove existing Leap repositories
 if [[ $(cat "$FLAG_FILE") -eq 1 ]]; then
     log "Removing old openSUSE Leap repositories..."
-    zypper lr -u | awk 'NR>2 {print $1}' | xargs -r zypper r
+    zypper lr -u | awk 'NR>2 {print $1}' | xargs -r -n1 zypper rr
     echo "2" > "$FLAG_FILE"
 fi
 
