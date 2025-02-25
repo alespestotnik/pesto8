@@ -112,7 +112,7 @@ fi
 if [[ $(cat "$FLAG_FILE") -eq 5 ]]; then
     log "Starting the full distribution upgrade..."
     zypper cc -a
-	zypper ref
+    zypper ref
     zypper dup --allow-vendor-change -y
     if [[ $? -ne 0 ]]; then
         log "ERROR: Distribution upgrade failed!"
