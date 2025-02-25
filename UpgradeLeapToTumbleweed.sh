@@ -3,9 +3,9 @@
 # Upgrade openSUSE Leap to openSUSE Tumbleweed
 # --------------------------------------------
 
-LOG_FILE="/var/log/UpgradeLeapToTumbleweed.log"
+LOG_FILE="/usr/local/LeapToTumbleweed/UpgradeLeapToTumbleweed.log"
 SERVER_NAME=$(hostname)  # Automatically get server name
-FLAG_FILE="/var/log/UpgradeLeapToTumbleweed-flag"  # File to track script progress
+FLAG_FILE="/usr/local/LeapToTumbleweed/UpgradeLeapToTumbleweed-flag"  # File to track script progress
 
 # Function to log messages
 log() {
